@@ -1,4 +1,4 @@
-test('has title', async (page, projectRoot, loadHtml) => {
+test('has title', async ({ page, loadHtml }) => {
   await loadHtml('index.html');
 
   // Expect a title "to contain" a substring.
