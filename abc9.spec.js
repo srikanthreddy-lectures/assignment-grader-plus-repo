@@ -1,9 +1,11 @@
-test('has title', async ({ page, expect }) => {
+test('has title', async ({ page, url, expect }) => {
+    await page.goto(url);
     const title = await page.title();
     await expect(title).toContain('My Website');
 });
 
-test('has heading', async ({ page, expect }) => {
+test('has heading', async ({ page, url, expect }) => {
+    await page.goto(url);
     const headingText = await page.locator('h1').first().textContent();
     await expect(headingText).toContain('Welcome');
 });
