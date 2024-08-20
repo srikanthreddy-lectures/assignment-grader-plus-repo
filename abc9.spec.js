@@ -1,7 +1,7 @@
 test('has title', async ({ page, url, expect }) => {
     await page.goto(url);
     const title = await page.title();
-    await expect(title).toContain('ACCCCCC');
+    await expect(title).toContain('Demo');
 });
 
 test('has heading', async ({ page, url, expect }) => {
